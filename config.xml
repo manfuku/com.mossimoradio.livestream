@@ -3,17 +3,17 @@
 <widget 
 xmlns     	= "http://www.w3.org/ns/widgets"
 xmlns:gap 	= "http://phonegap.com/ns/1.0"
-id        	= "com.mfk.quicklinks"
-android-packageName="com.mfk.quicklinks"
-ios-CFBundleIdentifier="com.mfk.quicklinks"
-versionCode	= "1" 
-version   	= "0.170530"
+id        	= "com.mossimoradio.livestream"
+android-packageName="com.mossimoradio.livestream"
+ios-CFBundleIdentifier="com.project9qc.mossimoradio"
+versionCode	= "17" 
+version   	= "2.16.0119"
 >
 
-<name>Quicklinks</name>
+<name>Mossimo Radio</name>
 
 <gap:platform name="android" />
-<!-- <gap:platform name="ios" /> -->
+<gap:platform name="ios" />
 
 <preference name="permissions"					value="none"/>
 
@@ -26,14 +26,14 @@ version   	= "0.170530"
 <preference name="show-splash-screen-spinner" 	value="true" />           <!-- ios: splash spinner visibility -->
 <preference name="auto-hide-splash-screen"    	value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
 
-<!-- IOS INLINE PLAYBACK
-<preference name="AllowInlineMediaPlayback" 	value="true" /> -->
+<!-- IOS INLINE PLAYBACK -->
+<preference name="AllowInlineMediaPlayback" 	value="true" />
 
-<!-- KEYBOARD FIX ANYARE!?
-<preference name="android-windowSoftInputMode" 	value="adjustResize" /> -->
+<!-- KEYBOARD FIX ANYARE!? -->
+<preference name="android-windowSoftInputMode" 	value="adjustResize" />
 
 <!-- ICONS -->
-<icon src="res/icon.png" gap:role="default" />
+<icon src="icon.png" gap:role="default" />
 
 		<!-- ANDOROID -->
 		<icon src="res/icon.png"	gap:platform="android" />
@@ -43,26 +43,26 @@ version   	= "0.170530"
 		<icon src="icon-72.png" 	gap:platform="ios" width="72" height="72" />
 		<icon src="icon-76.png" 	gap:platform="ios" width="76" height="76" />
 		<icon src="icon-120.png" 	gap:platform="ios" width="120" height="120" />
-		<icon src="res/icon.png" 	gap:platform="ios" width="152" height="152" /> 
+		<icon src="icon-152.png" 	gap:platform="ios" width="152" height="152" /> 
 
-<!-- SPLASH OK!!!
+<!-- SPLASH OK!!! -->
 <gap:splash src="res/screen/default.png" />
 <gap:splash src="res/screen/default.png" gap:platform="ios" width="640" height="1136" />
 
-		<preference name="SplashMaintainAspectRatio" value="true" /> -->
+		<preference name="SplashMaintainAspectRatio" value="true" />
 		
-<!-- PLUGINS
-<gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" /> -->
+<!-- PLUGINS -->
 <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+<gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 
 		<!-- ALLOW IFRAMES -->
 		<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 		<allow-navigation href="*" />
 
-		<!-- ONESIGNAL
+		<!-- ONESIGNAL -->
 		<gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
 		<gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
-		<gap:plugin name="cordova-plugin-android-support-v4" source="npm" /> -->
+		<gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
 
 </widget>
