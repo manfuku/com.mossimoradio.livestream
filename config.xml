@@ -11,9 +11,11 @@ version   	= "2.16.0119"
 >
 
 <name>Mossimo Radio</name>
-
+<description>https://github.com/manfuku/mossimoradio</description>
+	
 <gap:platform name="android" />
-<gap:platform name="ios" />
+<!--<gap:platform name="ios" />-->
+	
 
 <preference name="permissions"					value="none"/>
 
