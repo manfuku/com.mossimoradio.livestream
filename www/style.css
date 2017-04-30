@@ -1,0 +1,69 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+html, body, #wrap { margin: 0; padding: 0; height: 100%; min-height: 100%; }
+
+body { 
+text-align: center;
+background: #000; 
+}
+
+.gradient {
+/* background: -webkit-linear-gradient(-45deg, #f7931e 0%, #f15a24 100%); */
+background-image: -webkit-linear-gradient(-45deg, rgb(247, 147, 30) 0%, rgb(241, 90, 36) 100%);
+/* background-repeat: no-repeat;  */
+background-attachment: fixed; 
+}
+
+ul,li { list-style: none; margin:0; padding: 0; }
+img { width: auto; height: auto; }
+
+/* NAVIGATION */
+ul#nav { overflow: hidden; width: 100% }
+ul#nav a { display: block; padding: 16px 0; }
+ul#nav img { height: 24px; width: auto; }
+ul#nav li { display: inline-block; width: 15%; float: left; }
+ul#nav li:first-child { width: 40%; padding: 12px 0; }
+ul#nav li:nth-child(n+2) { opacity: 0.35 }
+
+ul#nav li:first-child img { float: left; padding-left: 16px; height: 36px; }
+ul#nav li.active a { border-bottom: 4px #fff solid !important; padding-bottom: 12px; }
+ul#nav li.active  { opacity: 1 }
+
+/* DISABLE AUDIO BUTTON */
+#navAudio { display: none !important; }
+ul#nav li { width: 20%; float: left; }
+ul#nav li:first-child { width: 40%; }
+
+
+/* VIDEO PLAYER */
+.theatre { position:relative; padding-bottom: 56.25%;  padding-bottom: 46.25%; padding-top: 32px; height:0; background: #000; }
+.theatre iframe { position:absolute; top: 0; left: 0; width:100%; height:100% }
+		
+		/* Hide Navigation on Landscape */
+		@media screen and (min-width: 480px) and (max-height: 415px) {
+		.video #nav, .video #social { display: none; }
+		.theatre { padding-top: 0; padding-bottom: 56.25%; }
+		}
+				
+/* OFFSITE IFRAME */
+#offsite { position: absolute; top: 60px; bottom: 0px; width: 100%; overflow: hidden; }
+#offsite iframe { width: 100%; height: 100%; overflow: hidden; }
+
+/* SOCIAL */
+#social { padding: 16px; width: 100% }
+#hash { width: 100%; border-bottom: 1px #fff solid; margin-bottom: 16px; }
+#hash img { height: 12px; display: inline-block; margin-bottom: 16px; vertical-align: top;  }
+
+ul#follow { width: 240px; display: block; overflow: hidden; margin: 0 auto 16px;  }
+ul#follow li { width: 80px; display: block; float: left }
+ul#follow li a { display: block; }
+ul#follow li img { width: 48px; }
+
+#share { display: block; padding: 12px 24px 6px; border: 1px #fff solid; border-radius: 7px; }
+#share img { max-height: 16px; }
+
+		/* Tablets & Large Screens*/
+		@media screen and (min-width: 801px) { 
+		#share { width: 30%; margin: 0 auto; }
+		}

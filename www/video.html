@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="cordova.js"></script>
+		
+	<script>
+	document.addEventListener('deviceready', function () {
+		var notificationOpenedCallback = function(jsonData) {
+		console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+		};
+
+		window.plugins.OneSignal.init("6778d78a-880d-11e5-afa0-a0369f2d9328",
+		{googleProjectNumber: "896901091439"},
+		notificationOpenedCallback);
+
+	window.plugins.OneSignal.enableInAppAlertNotification(true);
+	}, false);
+	</script>
+
+		<script src="res/ustream-embedapi.js"></script>
+		<script>document.body.style.height = screen.availHeight + 'px';</script>	
+
+</head>
+
+<body>
+<div id="wrap" class="video gradient">
+
+	<ul id="nav" class="gradient">
+	<!-- NAVIGATION -->
+	<li id="navlogo"><img src="res/logo.png"></li>
+	<li id="navVideo"class="active"><a href="video.html"><img src="res/ic_videocam_white_48px.svg"></a></li>
+	<li id="navAudio"><a href="audio.html"><img src="res/ic_volume_up_white_48px.svg"></a></li>
+	<li id="navchat"><a href="chat.html"><img src="res/ic_forum_white_48px.svg"></a></li>
+	<li id="navAnno"><a href="announcements.html"><img src="res/ic_new_releases_white_48px.svg"></a></li>
+	</ul>
+
+		<div class="theatre">
+		<iframe webkit-playsinline src="http://www.ustream.tv/embed/19131130" scrolling="no" frameborder="0"></iframe>
+		</div>
+
+			<div id="social">
+			<div id="hash"><img src="res/follow.png"></div>
+			<ul id="follow">
+			<li><a href="#" onclick="window.open('http://facebook.com/mossimoradio','_system','location=yes','closebuttoncaption=Return');"><img src="res/sFb.png"></a></li>
+			<li><a href="#" onclick="window.open('http://instagram.com/mossimoradio','_system','location=yes','closebuttoncaption=Return');"><img src="res/sIg.png"></a></li>
+			<li><a href="#" onclick="window.open('http://twitter.com/mossimoradio','_system','location=yes','closebuttoncaption=Return');"><img src="res/sTw.png"></a></li>
+			</ul>
+			<a href="#" id="share" onclick="window.plugins.socialsharing.share(null, null, null, 'http://mossimoradio.com/')"><img src="res/btnShare.png"></a>
+			</div>
+
+</div>
+</body>
+</html>
